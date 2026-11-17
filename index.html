@@ -1,1 +1,1201 @@
-<h1>hello</h1>
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruang Kreativitas — Solusi Digital & Agensi Kreatif Modern</title>
+  <meta name="description" content="Ruang Kreativitas adalah agensi kreatif digital yang membantu brand berkembang lewat desain inovatif, pengembangan website modern, dan strategi pemasaran digital.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              200: '#ddd6fe',
+              300: '#c4b5fd',
+              400: '#a78bfa',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              800: '#5b21b6',
+              900: '#4c1d95',
+            },
+            accent: {
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+            }
+          },
+          boxShadow: {
+            'glow': '0 0 40px -10px rgba(124, 58, 237, 0.35)',
+            'soft': '0 10px 30px -5px rgba(0, 0, 0, 0.05)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#beranda" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-600 via-brand-500 to-accent-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+          <i class="fa-solid fa-shapes text-xl"></i>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-bold tracking-tight text-slate-900 group-hover:text-brand-600 transition-colors">
+            Ruang<span class="text-brand-600">Kreativitas</span>
+          </span>
+          <span class="text-[10px] uppercase tracking-widest text-slate-400 font-semibold -mt-1">Digital Studio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="#beranda" class="hover:text-brand-600 transition-colors">Beranda</a>
+        <a href="#tentang" class="hover:text-brand-600 transition-colors">Tentang Kami</a>
+        <a href="#layanan" class="hover:text-brand-600 transition-colors">Layanan</a>
+        <a href="#portofolio" class="hover:text-brand-600 transition-colors">Portofolio</a>
+        <a href="#keunggulan" class="hover:text-brand-600 transition-colors">Keunggulan</a>
+        <a href="#testimoni" class="hover:text-brand-600 transition-colors">Testimoni</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#kontak" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold shadow-md shadow-brand-600/25 transition-all duration-200 hover:-translate-y-0.5">
+          <span>Konsultasi Gratis</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileMenuBtn" aria-label="Buka Menu" class="md:hidden p-2.5 rounded-lg text-slate-600 hover:text-brand-600 hover:bg-slate-100 transition-colors">
+        <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden border-b border-slate-200 bg-white/95 backdrop-blur-xl px-6 py-6 space-y-4 shadow-xl">
+      <nav class="flex flex-col gap-4 text-base font-medium text-slate-700">
+        <a href="#beranda" class="mobile-nav-link hover:text-brand-600 py-1">Beranda</a>
+        <a href="#tentang" class="mobile-nav-link hover:text-brand-600 py-1">Tentang Kami</a>
+        <a href="#layanan" class="mobile-nav-link hover:text-brand-600 py-1">Layanan</a>
+        <a href="#portofolio" class="mobile-nav-link hover:text-brand-600 py-1">Portofolio</a>
+        <a href="#keunggulan" class="mobile-nav-link hover:text-brand-600 py-1">Keunggulan</a>
+        <a href="#testimoni" class="mobile-nav-link hover:text-brand-600 py-1">Testimoni</a>
+      </nav>
+      <div class="pt-4 border-t border-slate-100">
+        <a href="#kontak" class="mobile-nav-link flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-brand-600 text-white font-semibold shadow-md shadow-brand-600/30">
+          <span>Konsultasi Gratis</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section id="beranda" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+      <!-- Background subtle decorative shapes -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-brand-300/30 to-accent-300/20 blur-3xl rounded-full -z-10 pointer-events-none"></div>
+      <div class="absolute top-20 right-10 w-72 h-72 bg-purple-200/40 blur-2xl rounded-full -z-10 pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs sm:text-sm font-semibold shadow-sm">
+            <span class="flex h-2 w-2 rounded-full bg-brand-600 animate-pulse"></span>
+            <span>Solusi Kreatif &amp; Transformasi Digital Terdepan</span>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+            Wujudkan Ide Besar Bisnis Anda Bersama <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-brand-500 to-accent-500">Ruang Kreativitas</span>
+          </h1>
+
+          <!-- Description -->
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            Kami adalah studio kreatif yang menggabungkan desain inovatif, teknologi modern, dan strategi digital untuk memperkuat identitas brand dan melejitkan penjualan bisnis Anda.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <a href="#kontak" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-full bg-brand-600 hover:bg-brand-700 text-white font-semibold text-base shadow-lg shadow-brand-600/30 hover:shadow-xl transition-all duration-200 hover:-translate-y-0.5">
+              <span>Mulai Proyek Anda</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#portofolio" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-full bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold text-base shadow-sm transition-all duration-200">
+              <i class="fa-solid fa-circle-play text-brand-600"></i>
+              <span>Lihat Portofolio</span>
+            </a>
+          </div>
+
+          <!-- Rating / Trust snippet -->
+          <div class="pt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-slate-500">
+            <div class="flex items-center gap-1.5 text-amber-400">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span class="text-slate-800 font-bold ml-1">4.9/5</span>
+            </div>
+            <span class="hidden sm:inline text-slate-300">•</span>
+            <span>Dipercaya lebih dari <strong>150+</strong> Brand &amp; UMKM di Indonesia</span>
+          </div>
+        </div>
+
+        <!-- Hero Showcase Visual Grid -->
+        <div class="mt-14 relative max-w-5xl mx-auto">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200/80 bg-white">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" 
+                 alt="Tim Ruang Kreativitas sedang berkolaborasi" 
+                 class="w-full h-72 sm:h-96 md:h-[460px] object-cover">
+            
+            <!-- Floating Overlay Card Left -->
+            <div class="absolute bottom-6 left-6 hidden sm:flex items-center gap-4 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-100 max-w-xs">
+              <div class="w-12 h-12 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center text-xl shrink-0">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400 font-medium">Pertumbuhan Klien</p>
+                <p class="text-lg font-bold text-slate-900">+185% Trafik &amp; Leads</p>
+              </div>
+            </div>
+
+            <!-- Floating Overlay Card Right -->
+            <div class="absolute top-6 right-6 hidden sm:flex items-center gap-3 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-full shadow-lg border border-slate-100">
+              <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+              <span class="text-xs font-semibold text-slate-700">Tersedia untuk Proyek Baru</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Metrics Strip -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mt-12 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/60">
+          <div class="text-center border-r border-slate-100 last:border-none">
+            <p class="text-3xl sm:text-4xl font-extrabold text-brand-600">250+</p>
+            <p class="text-xs sm:text-sm text-slate-500 mt-1 font-medium">Proyek Selesai</p>
+          </div>
+          <div class="text-center md:border-r border-slate-100 last:border-none">
+            <p class="text-3xl sm:text-4xl font-extrabold text-brand-600">98%</p>
+            <p class="text-xs sm:text-sm text-slate-500 mt-1 font-medium">Kepuasan Klien</p>
+          </div>
+          <div class="text-center border-r border-slate-100 last:border-none">
+            <p class="text-3xl sm:text-4xl font-extrabold text-brand-600">6+ Thn</p>
+            <p class="text-xs sm:text-sm text-slate-500 mt-1 font-medium">Pengalaman Industri</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl sm:text-4xl font-extrabold text-brand-600">15+</p>
+            <p class="text-xs sm:text-sm text-slate-500 mt-1 font-medium">Penghargaan Desain</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TENTANG KAMI ================= -->
+    <section id="tentang" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Image Collage -->
+          <div class="relative">
+            <div class="relative z-10 rounded-2xl overflow-hidden shadow-xl border border-slate-100">
+              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" 
+                   alt="Suasana kantor studio" 
+                   class="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <!-- Decorative Accent Box -->
+            <div class="absolute -bottom-6 -right-6 w-52 bg-brand-600 text-white p-5 rounded-2xl shadow-xl z-20 hidden sm:block">
+              <p class="text-2xl font-black">100%</p>
+              <p class="text-xs text-brand-100 mt-1">Dedikasi kami menghasilkan karya orisinal yang berdampak nyata.</p>
+            </div>
+            <div class="absolute -top-4 -left-4 w-32 h-32 bg-accent-100 rounded-full blur-xl -z-10"></div>
+          </div>
+
+          <!-- Content Description -->
+          <div class="space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs font-semibold tracking-wide uppercase">
+              Tentang Ruang Kreativitas
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
+              Membantu Bisnis Anda Berbicara Lebih Lantang di Dunia Digital
+            </h2>
+
+            <p class="text-slate-600 leading-relaxed text-base">
+              Didirikan dengan semangat eksplorasi dan presisi, <strong>Ruang Kreativitas</strong> berdedikasi menjadi mitra strategis bagi perusahaan, startup, dan pelaku usaha yang ingin melangkah lebih jauh.
+            </p>
+
+            <p class="text-slate-600 leading-relaxed text-base">
+              Kami percaya bahwa desain visual yang hebat dan teknologi yang andal bukan sekadar pemanis, melainkan fondasi utama untuk membangun kepercayaan konsumen dan mempercepat konversi.
+            </p>
+
+            <!-- Key Points -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center shrink-0 text-sm mt-0.5">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 text-sm">Pendekatan Berbasis Data</h3>
+                  <p class="text-xs text-slate-500 mt-0.5">Setiap keputusan desain didasari riset pasar mendalam.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center shrink-0 text-sm mt-0.5">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 text-sm">Desain Orisinal &amp; Segar</h3>
+                  <p class="text-xs text-slate-500 mt-0.5">Tidak menggunakan template generik yang pasaran.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center shrink-0 text-sm mt-0.5">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 text-sm">Teknologi Modern</h3>
+                  <p class="text-xs text-slate-500 mt-0.5">Performa website kilat, aman, dan responsif.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center shrink-0 text-sm mt-0.5">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 text-sm">Kolaborasi Terbuka</h3>
+                  <p class="text-xs text-slate-500 mt-0.5">Komunikasi transparan dalam setiap iterasi proyek.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <a href="#keunggulan" class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-700 group text-sm">
+                <span>Pelajari keunggulan dan metode kerja kami</span>
+                <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LAYANAN ================= -->
+    <section id="layanan" class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-semibold uppercase tracking-wide">
+            Layanan Kami
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Layanan Terintegrasi untuk Pertumbuhan Brand Anda
+          </h2>
+          <p class="text-slate-600 text-base">
+            Kami menghadirkan paket solusi komprehensif mulai dari konsep visual awal hingga eksekusi teknis tingkat tinggi.
+          </p>
+        </div>
+
+        <!-- Services Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1: UI/UX & Brand Identity -->
+          <div class="bg-white rounded-2xl p-8 border border-slate-200/80 hover:border-brand-300 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-14 h-14 rounded-xl bg-brand-50 text-brand-600 group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center text-2xl shadow-sm">
+                <i class="fa-solid fa-pen-nib"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
+                Brand Identity &amp; UI/UX
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Rancang identitas visual yang khas, logo ikonik, panduan brand (brand guideline), hingga prototipe desain aplikasi mobile &amp; web yang intuitif.
+              </p>
+              <ul class="space-y-2 text-xs text-slate-500 pt-2 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Logo &amp; Brand System</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Wireframing &amp; Prototyping (Figma)</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Design System Komprehensif</li>
+              </ul>
+            </div>
+            <div class="pt-6">
+              <a href="#kontak" class="text-xs font-bold text-brand-600 group-hover:text-brand-700 inline-flex items-center gap-1.5">
+                Konsultasikan Layanan Ini <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: Web & App Development -->
+          <div class="bg-white rounded-2xl p-8 border border-slate-200/80 hover:border-brand-300 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-14 h-14 rounded-xl bg-accent-50 text-accent-600 group-hover:bg-accent-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center text-2xl shadow-sm">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
+                Web &amp; Digital Development
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Pembangunan website profil perusahaan, toko online (e-commerce), landing page konversi tinggi, dan aplikasi web modern yang cepat serta aman.
+              </p>
+              <ul class="space-y-2 text-xs text-slate-500 pt-2 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-600"></i> Responsif di Semua Perangkat</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-600"></i> Optimasi Kecepatan &amp; SEO Friendly</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-600"></i> CMS Mudah Dikelola Sendiri</li>
+              </ul>
+            </div>
+            <div class="pt-6">
+              <a href="#kontak" class="text-xs font-bold text-brand-600 group-hover:text-brand-700 inline-flex items-center gap-1.5">
+                Konsultasikan Layanan Ini <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Digital Marketing & SEO -->
+          <div class="bg-white rounded-2xl p-8 border border-slate-200/80 hover:border-brand-300 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-14 h-14 rounded-xl bg-purple-50 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center text-2xl shadow-sm">
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
+                Digital Marketing &amp; Ads
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Strategi pemasaran digital terukur melalui Google Ads, Meta Ads (Facebook &amp; Instagram), TikTok Ads, serta optimasi mesin pencari (SEO).
+              </p>
+              <ul class="space-y-2 text-xs text-slate-500 pt-2 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-600"></i> Manajemen Iklan Berbayar</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-600"></i> Optimasi SEO Organik</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-600"></i> Laporan Analitik &amp; ROI Jelas</li>
+              </ul>
+            </div>
+            <div class="pt-6">
+              <a href="#kontak" class="text-xs font-bold text-brand-600 group-hover:text-brand-700 inline-flex items-center gap-1.5">
+                Konsultasikan Layanan Ini <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4: Content Creation & Social Media -->
+          <div class="bg-white rounded-2xl p-8 border border-slate-200/80 hover:border-brand-300 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-14 h-14 rounded-xl bg-pink-50 text-pink-600 group-hover:bg-pink-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center text-2xl shadow-sm">
+                <i class="fa-solid fa-photo-film"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
+                Social Media Management
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Kelola akun media sosial bisnis secara profesional dengan konten terjadwal, feeds estetis, copy memikat, dan interaksi komunitas aktif.
+              </p>
+              <ul class="space-y-2 text-xs text-slate-500 pt-2 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-600"></i> Content Plan &amp; Copywriting</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-600"></i> Desain Feed &amp; Story Eksklusif</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-600"></i> Moderasi &amp; Komunikasi Audiens</li>
+              </ul>
+            </div>
+            <div class="pt-6">
+              <a href="#kontak" class="text-xs font-bold text-brand-600 group-hover:text-brand-700 inline-flex items-center gap-1.5">
+                Konsultasikan Layanan Ini <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5: Video & Motion Graphics -->
+          <div class="bg-white rounded-2xl p-8 border border-slate-200/80 hover:border-brand-300 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-14 h-14 rounded-xl bg-amber-50 text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center text-2xl shadow-sm">
+                <i class="fa-solid fa-clapperboard"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
+                Video &amp; Motion Production
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Produksi video profil perusahaan yang berkelas, video promosi produk untuk TikTok/Reels, animasi logo, dan motion graphics interaktif.
+              </p>
+              <ul class="space-y-2 text-xs text-slate-500 pt-2 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> Company Profile Video</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> Short-form Video (Reels/TikTok)</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> Animasi 2D &amp; Motion Graphic</li>
+              </ul>
+            </div>
+            <div class="pt-6">
+              <a href="#kontak" class="text-xs font-bold text-brand-600 group-hover:text-brand-700 inline-flex items-center gap-1.5">
+                Konsultasikan Layanan Ini <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 6: Konsultasi & Strategi Bisnis -->
+          <div class="bg-white rounded-2xl p-8 border border-slate-200/80 hover:border-brand-300 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-14 h-14 rounded-xl bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center text-2xl shadow-sm">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
+                Konsultasi &amp; IT Support
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Layanan pendampingan teknis jangka panjang, pemeliharaan sistem, audit keamanan website, dan workshop in-house untuk tim internal Anda.
+              </p>
+              <ul class="space-y-2 text-xs text-slate-500 pt-2 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Maintenance &amp; Backup Rutin</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Audit Kecepatan &amp; UX Audit</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> SLA Support Cepat Tanggap</li>
+              </ul>
+            </div>
+            <div class="pt-6">
+              <a href="#kontak" class="text-xs font-bold text-brand-600 group-hover:text-brand-700 inline-flex items-center gap-1.5">
+                Konsultasikan Layanan Ini <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PORTOFOLIO / KARYA KAMI ================= -->
+    <section id="portofolio" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div class="space-y-3">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-semibold uppercase tracking-wide">
+              Portofolio Pilihan
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Karya Terbaru Kami
+            </h2>
+            <p class="text-slate-600 text-sm sm:text-base max-w-xl">
+              Intip bagaimana kami membantu berbagai brand meningkatkan kredibilitas dan mendominasi pasar mereka.
+            </p>
+          </div>
+
+          <!-- Category Filter Buttons -->
+          <div class="flex flex-wrap gap-2 text-xs sm:text-sm font-semibold" id="portfolioFilter">
+            <button data-filter="all" class="filter-btn active px-4 py-2 rounded-full bg-brand-600 text-white shadow-sm transition-all">Semua</button>
+            <button data-filter="web" class="filter-btn px-4 py-2 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">Website</button>
+            <button data-filter="branding" class="filter-btn px-4 py-2 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">Branding</button>
+            <button data-filter="app" class="filter-btn px-4 py-2 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">Mobile App</button>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolioGrid">
+          <!-- Project 1 -->
+          <div class="portfolio-item group rounded-2xl overflow-hidden border border-slate-200/80 bg-white hover:shadow-xl transition-all duration-300" data-category="web">
+            <div class="relative overflow-hidden h-60 bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80" 
+                   alt="Website FinTech Nexa" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <span class="text-white text-xs font-semibold px-2.5 py-1 rounded bg-brand-600">Lihat Studi Kasus</span>
+              </div>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Web Development</span>
+              <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">Nexa Financial Platform</h3>
+              <p class="text-xs text-slate-500">Platform SaaS finansial dengan antarmuka analitik real-time dan konversi onboarding tinggi.</p>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="portfolio-item group rounded-2xl overflow-hidden border border-slate-200/80 bg-white hover:shadow-xl transition-all duration-300" data-category="branding">
+            <div class="relative overflow-hidden h-60 bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=700&q=80" 
+                   alt="Branding Artisan Coffee" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <span class="text-white text-xs font-semibold px-2.5 py-1 rounded bg-brand-600">Lihat Studi Kasus</span>
+              </div>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-pink-600">Brand Identity</span>
+              <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">Kopi Senja Nusantara</h3>
+              <p class="text-xs text-slate-500">Rebranding menyeluruh: logo, packaging eco-friendly, dan identitas visual 12 gerai nasional.</p>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="portfolio-item group rounded-2xl overflow-hidden border border-slate-200/80 bg-white hover:shadow-xl transition-all duration-300" data-category="app">
+            <div class="relative overflow-hidden h-60 bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" 
+                   alt="Aplikasi MedCare" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <span class="text-white text-xs font-semibold px-2.5 py-1 rounded bg-brand-600">Lihat Studi Kasus</span>
+              </div>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-accent-600">Mobile UI/UX</span>
+              <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">MedCare Telehealth App</h3>
+              <p class="text-xs text-slate-500">Aplikasi konsultasi dokter ramah pengguna dengan sistem reservasi instan &amp; rekam medis digital.</p>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="portfolio-item group rounded-2xl overflow-hidden border border-slate-200/80 bg-white hover:shadow-xl transition-all duration-300" data-category="web">
+            <div class="relative overflow-hidden h-60 bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=700&q=80" 
+                   alt="E-commerce Fashion Urban" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <span class="text-white text-xs font-semibold px-2.5 py-1 rounded bg-brand-600">Lihat Studi Kasus</span>
+              </div>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-600">E-Commerce Web</span>
+              <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">UrbanCloth Online Store</h3>
+              <p class="text-xs text-slate-500">Website e-commerce modern dengan integrasi pembayaran multi-channel otomatis &amp; ongkir otomatis.</p>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="portfolio-item group rounded-2xl overflow-hidden border border-slate-200/80 bg-white hover:shadow-xl transition-all duration-300" data-category="branding">
+            <div class="relative overflow-hidden h-60 bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=700&q=80" 
+                   alt="Interior Architecture Branding" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <span class="text-white text-xs font-semibold px-2.5 py-1 rounded bg-brand-600">Lihat Studi Kasus</span>
+              </div>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-pink-600">Brand &amp; Print</span>
+              <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">Vanguard Architecture</h3>
+              <p class="text-xs text-slate-500">Company profile buku elegan, kartu nama premium foil emas, dan signage kantor eksklusif.</p>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="portfolio-item group rounded-2xl overflow-hidden border border-slate-200/80 bg-white hover:shadow-xl transition-all duration-300" data-category="app">
+            <div class="relative overflow-hidden h-60 bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=700&q=80" 
+                   alt="FitLife Gym App" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <span class="text-white text-xs font-semibold px-2.5 py-1 rounded bg-brand-600">Lihat Studi Kasus</span>
+              </div>
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-accent-600">Mobile UI/UX</span>
+              <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">FitLife Member Companion</h3>
+              <p class="text-xs text-slate-500">Aplikasi kebugaran dengan pelacak latihan harian, booking trainer pribadi, dan integrasi smartwatch.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROSES KERJA ================= -->
+    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+      <!-- Decorative Glow -->
+      <div class="absolute top-0 right-1/4 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-800 text-brand-400 text-xs font-semibold uppercase tracking-wide border border-slate-700">
+            Alur Kerja Kami
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            Bagaimana Kami Merealisasikan Visi Anda
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base">
+            Proses kolaboratif yang terstruktur rapi untuk memastikan setiap detail selesai tepat waktu dengan standar mutu tinggi.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="relative bg-slate-800/60 backdrop-blur border border-slate-700/60 p-6 rounded-2xl">
+            <span class="text-4xl font-extrabold text-brand-400/30">01</span>
+            <h3 class="text-lg font-bold text-white mt-4">Diskusi &amp; Discovery</h3>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Kami mendengarkan kebutuhan bisnis, target audiens, tantangan, dan tujuan spesifik yang ingin Anda capai.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative bg-slate-800/60 backdrop-blur border border-slate-700/60 p-6 rounded-2xl">
+            <span class="text-4xl font-extrabold text-brand-400/30">02</span>
+            <h3 class="text-lg font-bold text-white mt-4">Riset &amp; Konsep Desain</h3>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Penyusunan blueprint, wireframe, moodboard visual, dan arsitektur informasi sebelum tahap eksekusi dimulai.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative bg-slate-800/60 backdrop-blur border border-slate-700/60 p-6 rounded-2xl">
+            <span class="text-4xl font-extrabold text-brand-400/30">03</span>
+            <h3 class="text-lg font-bold text-white mt-4">Eksekusi &amp; Review</h3>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Pengembangan kode dan desain secara simultan dengan sesi demonstrasi berkala untuk menerima masukan Anda.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="relative bg-slate-800/60 backdrop-blur border border-slate-700/60 p-6 rounded-2xl">
+            <span class="text-4xl font-extrabold text-brand-400/30">04</span>
+            <h3 class="text-lg font-bold text-white mt-4">Peluncuran &amp; Garansi</h3>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Peluncuran resmi ke publik, penyerahan seluruh aset, pelatihan admin, serta dukungan pemeliharaan aktif.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KEUNGGULAN / KENAPA KAMI ================= -->
+    <section id="keunggulan" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs font-semibold tracking-wide uppercase mb-4">
+              Mengapa Ruang Kreativitas?
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+              Keahlian Profesional yang Menghasilkan Dampak Bisnis Nyata
+            </h2>
+            <p class="text-slate-600 mt-4 leading-relaxed text-sm sm:text-base">
+              Banyak agensi hanya fokus membuat tampilan terlihat menarik. Kami melangkah lebih jauh: memastikan setiap desain dan kode berkontribusi langsung pada pertumbuhan penjualan dan loyalitas pelanggan Anda.
+            </p>
+
+            <div class="space-y-4 mt-8">
+              <div class="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 hover:border-brand-200 transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center shrink-0 font-bold text-base">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 text-sm">Pengerjaan Cepat &amp; Tepat Janji</h3>
+                  <p class="text-xs text-slate-500 mt-1">Timeline yang jelas dan transparan. Kami menghargai waktu Anda tanpa kompromi pada kualitas.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 hover:border-brand-200 transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 font-bold text-base">
+                  <i class="fa-solid fa-headset"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 text-sm">Dukungan Responsif &amp; Terbuka</h3>
+                  <p class="text-xs text-slate-500 mt-1">Dedicated project manager yang siap menjawab pertanyaan dan mendiskusikan revisi via WhatsApp/Google Meet.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 hover:border-brand-200 transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center shrink-0 font-bold text-base">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 text-sm">Garansi Pasca Peluncuran</h3>
+                  <p class="text-xs text-slate-500 mt-1">Gratis pendampingan teknis dan perbaikan bug selama 3 bulan pertama setelah website tayang.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Testimonial Highlight / Feature Badge Box -->
+          <div class="relative">
+            <div class="bg-gradient-to-br from-brand-600 to-indigo-800 text-white p-8 sm:p-10 rounded-3xl shadow-xl relative overflow-hidden">
+              <!-- Decorative circles -->
+              <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-white/10 rounded-full blur-xl"></div>
+              
+              <div class="space-y-6 relative z-10">
+                <span class="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-semibold backdrop-blur-sm">
+                  Komitmen Kami
+                </span>
+                <blockquote class="text-xl sm:text-2xl font-semibold leading-relaxed">
+                  "Kreativitas bukan hanya soal estetika, melainkan bagaimana memecahkan masalah klien dengan cara yang paling efektif dan berkesan."
+                </blockquote>
+                
+                <div class="pt-4 border-t border-white/20 flex items-center gap-4">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" 
+                       alt="Founder Ruang Kreativitas" 
+                       class="w-12 h-12 rounded-full border-2 border-white object-cover">
+                  <div>
+                    <h3 class="font-bold text-base text-white">Nadia Larasati</h3>
+                    <p class="text-xs text-brand-200">Creative Director &amp; Co-Founder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONI ================= -->
+    <section id="testimoni" class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-semibold uppercase tracking-wide">
+            Kata Klien Kami
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Cerita Sukses Bersama Mitra Kami
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            Ulasan jujur dari para pemimpin bisnis yang telah mempercayakan kehadiran digital mereka kepada kami.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex text-amber-400 gap-1 text-sm">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-600 text-sm italic leading-relaxed">
+                "Ruang Kreativitas merombak website perusahaan kami hingga konversi prospek naik 3x lipat dalam waktu 2 bulan. Timnya sangat komunikatif dan mengerti konsep bisnis kami dengan cepat!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-6 border-t border-slate-100 mt-6">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" 
+                   alt="Budi Santoso" 
+                   class="w-11 h-11 rounded-full object-cover">
+              <div>
+                <h3 class="font-bold text-sm text-slate-900">Budi Santoso</h3>
+                <p class="text-xs text-slate-400">CEO, PT Nexa Solusi Digital</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex text-amber-400 gap-1 text-sm">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-600 text-sm italic leading-relaxed">
+                "Konsep desain kemasan dan brand identity yang mereka buatkan untuk coffee shop kami mendapatkan banyak sekali pujian dari konsumen. Benar-benar kreatif dan di luar ekspektasi."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-6 border-t border-slate-100 mt-6">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" 
+                   alt="Amalia Putri" 
+                   class="w-11 h-11 rounded-full object-cover">
+              <div>
+                <h3 class="font-bold text-sm text-slate-900">Amalia Putri</h3>
+                <p class="text-xs text-slate-400">Founder, Kopi Senja</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex text-amber-400 gap-1 text-sm">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-600 text-sm italic leading-relaxed">
+                "Sangat puas dengan performa website yang dibangun. Loading sangat cepat, navigasi simpel, dan after-sales support-nya selalu siap sedia kapan pun kami membutuhkan penyesuaian."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-6 border-t border-slate-100 mt-6">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" 
+                   alt="Deni Gunawan" 
+                   class="w-11 h-11 rounded-full object-cover">
+              <div>
+                <h3 class="font-bold text-sm text-slate-900">Deni Gunawan</h3>
+                <p class="text-xs text-slate-400">Marketing Director, MedCare Group</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA BANNER ================= -->
+    <section class="py-16 bg-gradient-to-r from-brand-700 via-brand-600 to-accent-600 text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
+          Siap Mewujudkan Transformasi Brand Anda?
+        </h2>
+        <p class="text-brand-100 max-w-2xl mx-auto text-base sm:text-lg">
+          Jadwalkan sesi konsultasi gratis 30 menit bersama lead desainer dan teknolog kami untuk membahas rencana pertumbuhan bisnis Anda.
+        </p>
+        <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
+          <a href="#kontak" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-white text-brand-700 font-bold hover:bg-slate-100 shadow-xl transition-all hover:scale-105">
+            <i class="fa-brands fa-whatsapp text-emerald-600 text-lg"></i>
+            <span>Hubungi Kami Sekarang</span>
+          </a>
+          <a href="mailto:halo@ruangkreativitas.id" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-brand-800/60 hover:bg-brand-800/80 text-white font-semibold border border-white/20 transition-all">
+            <i class="fa-regular fa-envelope"></i>
+            <span>halo@ruangkreativitas.id</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KONTAK KAMI ================= -->
+    <section id="kontak" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <!-- Contact Info (Left) -->
+          <div class="lg:col-span-5 space-y-8">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs font-semibold uppercase tracking-wide">
+                Hubungi Kami
+              </div>
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+                Mari Diskusikan Proyek Impian Anda
+              </h2>
+              <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+                Punya pertanyaan atau ingin mendapatkan proposal penawaran harga? Isi formulir atau kontak kami langsung melalui saluran resmi berikut.
+              </p>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0 text-base">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Lokasi Kantor</h3>
+                  <p class="text-sm font-semibold text-slate-800 mt-0.5">Jl. Senopati No. 45, Kebayoran Baru, Jakarta Selatan 12190</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0 text-base">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                  <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">WhatsApp / Telepon</h3>
+                  <p class="text-sm font-semibold text-slate-800 mt-0.5">+62 812-3456-7890</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0 text-base">
+                  <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div>
+                  <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Email Resmi</h3>
+                  <p class="text-sm font-semibold text-slate-800 mt-0.5">halo@ruangkreativitas.id</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0 text-base">
+                  <i class="fa-regular fa-clock"></i>
+                </div>
+                <div>
+                  <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Jam Operasional</h3>
+                  <p class="text-sm font-semibold text-slate-800 mt-0.5">Senin - Jumat : 09.00 - 18.00 WIB</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="pt-4">
+              <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Ikuti Media Sosial Kami</p>
+              <div class="flex gap-3">
+                <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-600 flex items-center justify-center transition-colors">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-600 flex items-center justify-center transition-colors">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#" aria-label="YouTube" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-600 flex items-center justify-center transition-colors">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#" aria-label="Dribbble" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-600 flex items-center justify-center transition-colors">
+                  <i class="fa-brands fa-dribbble"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form (Right) -->
+          <div class="lg:col-span-7">
+            <div class="bg-slate-50 border border-slate-200/80 rounded-3xl p-6 sm:p-10 shadow-sm">
+              <h3 class="text-2xl font-bold text-slate-900 mb-2">Kirim Pesan / Permintaan Proposal</h3>
+              <p class="text-slate-500 text-xs sm:text-sm mb-6">Kami akan merespons dalam waktu maksimal 1x24 jam kerja.</p>
+
+              <form id="contactForm" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="name" class="block text-xs font-semibold text-slate-700 mb-1.5">Nama Lengkap *</label>
+                    <input type="text" id="name" required placeholder="Contoh: Anton Wijaya" 
+                           class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+                  </div>
+                  <div>
+                    <label for="company" class="block text-xs font-semibold text-slate-700 mb-1.5">Nama Perusahaan / Brand</label>
+                    <input type="text" id="company" placeholder="Contoh: PT Maju Bersama" 
+                           class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="email" class="block text-xs font-semibold text-slate-700 mb-1.5">Alamat Email *</label>
+                    <input type="email" id="email" required placeholder="anton@example.com" 
+                           class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+                  </div>
+                  <div>
+                    <label for="phone" class="block text-xs font-semibold text-slate-700 mb-1.5">Nomor WhatsApp *</label>
+                    <input type="tel" id="phone" required placeholder="08123456789" 
+                           class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+                  </div>
+                </div>
+
+                <div>
+                  <label for="service" class="block text-xs font-semibold text-slate-700 mb-1.5">Layanan yang Dibutuhkan *</label>
+                  <select id="service" required class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm text-slate-700">
+                    <option value="" disabled selected>Pilih kategori layanan...</option>
+                    <option value="web">Web &amp; Digital Development</option>
+                    <option value="branding">Brand Identity &amp; UI/UX</option>
+                    <option value="marketing">Digital Marketing &amp; Ads</option>
+                    <option value="sosmed">Social Media Management</option>
+                    <option value="video">Video &amp; Motion Graphic</option>
+                    <option value="other">Konsultasi Terpadu / Lainnya</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="message" class="block text-xs font-semibold text-slate-700 mb-1.5">Ceritakan Kebutuhan Proyek Anda *</label>
+                  <textarea id="message" rows="4" required placeholder="Tuliskan gambaran singkat proyek, target audiens, dan perkiraan waktu peluncuran..." 
+                            class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-md shadow-brand-600/30 transition-all flex items-center justify-center gap-2">
+                  <i class="fa-regular fa-paper-plane"></i>
+                  <span>Kirim Pesan Sekarang</span>
+                </button>
+
+                <!-- Feedback alert message -->
+                <div id="formSuccessAlert" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-medium">
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                    <span>Terima kasih! Pesan Anda telah kami terima. Tim kami akan segera menghubungi Anda melalui WhatsApp atau Email.</span>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-950 text-slate-400 text-xs border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        <!-- Col 1: Brand Info -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-600 to-accent-500 flex items-center justify-center text-white">
+              <i class="fa-solid fa-shapes"></i>
+            </div>
+            <span class="text-xl font-bold tracking-tight text-white">
+              Ruang<span class="text-brand-500">Kreativitas</span>
+            </span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            Studio kreatif digital yang didedikasikan untuk mentransformasi bisnis melalui desain visual berkelas, rekayasa web mutakhir, dan strategi pemasaran yang terukur.
+          </p>
+          <div class="pt-2 text-slate-500 text-[11px]">
+            &copy; 2026 Ruang Kreativitas. Seluruh hak cipta dilindungi undang-undang.
+          </div>
+        </div>
+
+        <!-- Col 2: Navigasi Cepat -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Navigasi</h4>
+          <ul class="space-y-2">
+            <li><a href="#beranda" class="hover:text-white transition-colors">Beranda</a></li>
+            <li><a href="#tentang" class="hover:text-white transition-colors">Tentang Kami</a></li>
+            <li><a href="#layanan" class="hover:text-white transition-colors">Layanan</a></li>
+            <li><a href="#portofolio" class="hover:text-white transition-colors">Portofolio</a></li>
+            <li><a href="#keunggulan" class="hover:text-white transition-colors">Keunggulan</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Layanan -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Layanan</h4>
+          <ul class="space-y-2">
+            <li><a href="#layanan" class="hover:text-white transition-colors">Brand &amp; UI/UX Design</a></li>
+            <li><a href="#layanan" class="hover:text-white transition-colors">Web Development</a></li>
+            <li><a href="#layanan" class="hover:text-white transition-colors">Digital Advertising</a></li>
+            <li><a href="#layanan" class="hover:text-white transition-colors">Social Media Strategy</a></li>
+            <li><a href="#layanan" class="hover:text-white transition-colors">Video &amp; Motion</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Kontak -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Bantuan &amp; Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="#kontak" class="hover:text-white transition-colors">Hubungi Kami</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Kebijakan Privasi</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Syarat &amp; Ketentuan</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">FAQ &amp; Dokumentasi</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="backToTopBtn" aria-label="Kembali ke atas" class="fixed bottom-6 right-6 p-3 rounded-full bg-brand-600 text-white shadow-lg shadow-brand-600/40 hover:bg-brand-700 transition-all opacity-0 pointer-events-none z-40">
+    <i class="fa-solid fa-arrow-up text-sm"></i>
+  </button>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // 1. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      }
+    });
+
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      });
+    });
+
+    // 2. Navbar Background shadow on scroll & Back-to-top button
+    const navbar = document.getElementById('navbar');
+    const backToTopBtn = document.getElementById('backToTopBtn');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('shadow-sm');
+      } else {
+        navbar.classList.remove('shadow-sm');
+      }
+
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+        backToTopBtn.classList.add('opacity-100');
+      } else {
+        backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+        backToTopBtn.classList.remove('opacity-100');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 3. Portfolio Category Filter
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-brand-600', 'text-white');
+          btn.classList.add('bg-slate-100', 'text-slate-600');
+        });
+
+        // Add active style to clicked button
+        button.classList.add('bg-brand-600', 'text-white');
+        button.classList.remove('bg-slate-100', 'text-slate-600');
+
+        const filterValue = button.getAttribute('data-filter');
+
+        portfolioItems.forEach(item => {
+          const itemCategory = item.getAttribute('data-category');
+          if (filterValue === 'all' || itemCategory === filterValue) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // 4. Contact Form Submission Mock
+    const contactForm = document.getElementById('contactForm');
+    const formSuccessAlert = document.getElementById('formSuccessAlert');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Simulasikan pengiriman form
+      formSuccessAlert.classList.remove('hidden');
+      contactForm.reset();
+
+      // Scroll smoothly to alert
+      formSuccessAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      // Hilangkan pesan setelah 7 detik
+      setTimeout(() => {
+        formSuccessAlert.classList.add('hidden');
+      }, 7000);
+    });
+  </script>
+</body>
+</html>
